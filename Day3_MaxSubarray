@@ -1,0 +1,27 @@
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        def dnc(nums):
+            print(nums)
+            if not nums:
+                return 0
+            if len(nums)==1:
+                return nums[0]     
+            l=int(len(nums)/2)    
+            lftmss=dnc(nums[:l])
+            rytmss=dnc(nums[l:])
+            midmss=lftmss+rytmss
+            print(lftmss,rytmss,midmss)
+            #print('max',max(lftmss,rytmss,midmss))
+            print('lft',lftmss)
+        mid=int(len(nums)/2)
+        print(dnc(nums[:mid]))
+        print(dnc(nums[mid:]))
+        #return f+g
+            
+        
+            
+            
+        
+        
+        
+        
